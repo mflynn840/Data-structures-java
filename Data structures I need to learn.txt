@@ -1,0 +1,60 @@
+Array
+Linked List
+Stack
+Queue
+Deque (Double-Ended Queue)
+Circular Buffer
+Hashing Data Structures:
+Hash Table
+Hash Map
+Hash Set
+Trees:
+Binary Tree
+Binary Search Tree (BST)
+AVL Tree
+Red-Black Tree
+B-Tree
+Trie
+Suffix Tree
+Segment Tree
+Fenwick Tree (Binary Indexed Tree)
+Heaps:
+Heap
+Binary Heap
+Min Heap
+Max Heap
+Fibonacci Heap
+Graphs:
+Graph
+Adjacency Matrix
+Adjacency List
+Incidence Matrix
+Edge List
+Disjoint Set Data Structures:
+Disjoint Set (Union-Find)
+Hash Functions:
+Hash Function
+Universal Hashing
+Advanced Search Structures:
+Skip List
+B*-Tree
+Trie-based Data Structures (e.g., Ternary Search Trie)
+Priority Queues:
+Priority Queue
+Fibonacci Heap (for Priority Queue)
+Advanced Trees:
+B+ Tree
+Splay Tree
+Cartesian Tree
+Treap
+Balanced Search Trees:
+Self-Balancing Binary Search Tree
+Scapegoat Tree
+Weight-Balanced Tree
+Spatial Data Structures:
+Quadtree
+Octree
+KD-Tree
+Union-Find Variants:
+Disjoint Set with Path Compression
+Disjoint Set with Union by Rank
