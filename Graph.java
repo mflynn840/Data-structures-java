@@ -21,12 +21,13 @@ public class Graph{
 
     }
 
-    public int shortestPathFromIThroughJToK
-
     public void addEdge(int fromVertex, int toVertex){
         
 
         if (inBounds(fromVertex) && inBounds(toVertex)){
+
+            
+            //list of out neighbors
             LinkedList.append(this.adjList[fromVertex], toVertex);
         }else{
             System.out.println("ERROR: index out of bounds");
@@ -131,6 +132,34 @@ public class Graph{
 
     }
 
+    
+    public boolean inbounds(int v1, int v2){
+        return inBounds(v1) && inBounds(v2);
+    }
+
+
+    //returns edge weight if it exists, if not it returns infinity
+    public int getEdgeWeight(int toVertex, int fromVertex){
+
+        if(inbounds(toVertex, fromVertex)){
+            //llok at the all the out neighbors of this vertex this edge is coming from
+            Iterator<Integer> outNeighbors = this.adjList[fromVertex].iterator();
+
+            while(outNeighbors.hasNext()){
+
+                int neighbor = outNeighbors.next();
+                if(neighbor == toVertex){ return neighbor; }
+            }
+            
+            
+        }
+        else{
+            System.out.println("WARN: index out of bounds for vertex in getEdgeWeights method");
+        }
+
+        return Integer.MAX_VALUE;
+    }
+
     //Floyd-Warshall Algorithm pariwise shortest paths in a graph in O(V^3):
     public static double[][] FloydWarshall(Graph G){
 
@@ -174,7 +203,7 @@ public class Graph{
                 Iterator<Integer> outNeighbors = G.adjList[i].iterator();
                 while(outNeighbors.hasNext()){
                     int j = outNeighbors.next();
-                    int alternatePathLength = shortestPath[i][k] + G.getEdgeWeight(k, j);
+                    double alternatePathLength = shortestPath[i][k] + G.getEdgeWeight(k, j);
 
 
                     //shortestPath[i][j] = min{shortestPath[i][k] + w(k, j), shortestPath[i][j]}
@@ -302,7 +331,8 @@ public class Graph{
 
     }*/
 
-    public static boolean isDAG(Graph g, ){
+    public static boolean isDAG(Graph g){
+        return true;
 
     }
 
